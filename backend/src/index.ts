@@ -8,7 +8,7 @@ const app = express();
 const port = ENV.PORT;
 
 /** Middlewares */
-app.use(cors({ origin: ENV.FRONTEND_URL })); // Enables CORS for all routes
+app.use(cors({ origin: ENV.FRONTEND_URL })); // cors(): Enables CORS for all routes
 app.use(clerkMiddleware()); // Integrates Clerk authentication middleware
 app.use(express.json()); // Parses incoming JSON requests
 app.use(express.urlencoded({ extended: true })); // Parses form data
